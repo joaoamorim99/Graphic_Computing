@@ -1,0 +1,263 @@
+<world>
+	<camera> 
+	    <position x="55" y="5" z="-125" />
+	    <lookAt x="0" y="0" z="0" />
+	    <up x="0" y="1" z="0" /> <!-- optional, use these values as default-->
+        <projection fov="60" near="1" far="1000" /> <!-- optional, use these values as default-->
+    </camera>
+    <lights> 
+		<light type="point" dirx="0" diry="0" dirz="0"/>
+	</lights>
+	<group>
+		<!--Cometa-->
+		<group>
+			<transform>
+				<translate time="5" align="true">
+					<point x="0.0" y="0" z="72.0" />
+					<point x="50.91" y="20" z="50.91" />
+					<point x="72.0" y="10" z="0.0" />
+					<point x="50.91" y="0" z="-50.91" />
+					<point x="0.0" y="-5" z="-72.0" />
+					<point x="-50.91" y="-20" z="-50.91" />
+					<point x="-72.0" y="-10" z="-0.0" />
+					<point x="-50.91" y="0" z="50.91" />
+            	</translate>
+				<scale x="2" y="2" z="2"/>
+			</transform>
+			<models>
+                <model file="cone_nt.3d" >
+                    <color>
+                        <diffuse R="200" G="200" B="200" />
+                        <ambient R="50" G="50" B="50" />
+                        <specular R="0" G="0" B="0" />
+                        <emissive R="0" G="0" B="0" />
+                        <shininess value="128" />
+                    </color>
+                </model>
+            </models>
+		</group>
+		<!--Sol-->
+		<group>
+			<transform>
+				<scale x="10" y="10" z="10"/>
+			</transform>
+			<models>
+				<model file="sphere_nt.3d" >
+                    <color>
+                        <diffuse R="0" G="0" B="0" />
+                        <ambient R="0" G="0" B="0" />
+                        <specular R="0" G="0" B="0" />
+                        <emissive R="255" G="127,5" B="63,75" />
+                        <shininess value="128" />
+                    </color>
+                    <texture file="sun.jpg" />
+                </model>
+			</models>
+		</group>
+
+		<!-- Mercúrio-->
+		<group>	
+			<transform>
+				<translate time = "7" align="True" > <!-- O campo orient diz se o objecto deve ser orientado na curva -->
+					<point x="0.0" y="0" z="15.0" />
+                    <point x="10.61" y="0" z="10.61" />
+                    <point x="15.0" y="0" z="0.0" />
+                    <point x="10.61" y="0" z="-10.61" />
+                    <point x="0.0" y="0" z="-15.0" />
+                    <point x="-10.61" y="0" z="-10.61" />
+                    <point x="-15.0" y="0" z="-0.0" />
+                    <point x="-10.61" y="0" z="10.61" />
+				</translate>
+				<rotate time="10" x="0" y="1" z="0"/>
+				<scale x="0.7" y="0.7" z="0.7"/>
+			</transform>
+			<models>
+				<model file="sphere_nt.3d" >
+                    <texture file="mercury.jpg" />
+                </model>
+			</models>
+		</group>
+		<!--Vénus-->
+		<group>
+			<transform>
+				<translate time="8" align="True">
+					<point x="0.0" y="0" z="23.3" />
+					<point x="16.48" y="0" z="16.48" />
+					<point x="23.3" y="0" z="0.0" />
+					<point x="16.48" y="0" z="-16.48" />
+					<point x="0.0" y="0" z="-23.3" />
+					<point x="-16.48" y="0" z="-16.48" />
+					<point x="-23.3" y="0" z="-0.0" />
+					<point x="-16.48" y="0" z="16.48" />
+				</translate>
+				<rotate time="10" x="0" y="1" z="0"/>
+				<scale x="1.7" y="1.7" z="1.7"/>
+			</transform> 
+            <models>
+                <model file="sphere_nt.3d" >
+                    <texture file="venus.jpg" />
+                </model>
+            </models>
+        </group>
+
+		<!--Terra-->
+		<group>
+			<transform>
+                <translate time="10" align="True">
+                    <point x="0.0" y="0" z="33.3" />
+                    <point x="23.55" y="0" z="23.55" />
+                    <point x="33.3" y="0" z="0.0" />
+                    <point x="23.55" y="0" z="-23.55" />
+                    <point x="0.0" y="0" z="-33.3" />
+                    <point x="-23.55" y="0" z="-23.55" />
+                    <point x="-33.3" y="0" z="-0.0" />
+                    <point x="-23.55" y="0" z="23.55" />
+                </translate>
+                <rotate time="10" x="0" y="1" z="0"/>
+                <scale x="2" y="2" z="2"/>
+			</transform> 
+            <models>
+                <model file="sphere_nt.3d" >
+                    <texture file="earth.jpg" />
+                </model>
+            </models>
+			<!--Lua-->
+			<group>
+				<transform>
+                    <translate time="3" align="True">
+                        <point x="0.0" y="0" z="2.23" />
+                        <point x="1.58" y="0" z="1.58" />
+                        <point x="2.23" y="0" z="0.0" />
+                        <point x="1.58" y="0" z="-1.58" />
+                        <point x="0.0" y="0" z="-2.23" />
+                        <point x="-1.58" y="0" z="-1.58" />
+                        <point x="-2.23" y="0" z="-0.0" />
+                        <point x="-1.58" y="0" z="1.58" />
+                    </translate>
+                    <scale x="0.25" y="0.25" z="0.25"/>
+				</transform>
+                <models>
+                    <model file="sphere_nt.3d" >
+                        <texture file="moon.jpg" />
+                </model>
+                </models>
+            </group>
+        </group>
+		
+		<!--Marte-->
+		<group>
+			<transform>
+                <translate time="15" align="True">
+                    <point x="0.0" y="0" z="36.8" />
+                    <point x="26.02" y="0" z="26.02" />
+                    <point x="36.8" y="0" z="0.0" />
+                    <point x="26.02" y="0" z="-26.02" />
+                    <point x="0.0" y="0" z="-36.8" />
+                    <point x="-26.02" y="0" z="-26.02" />
+                    <point x="-36.8" y="0" z="-0.0" />
+                    <point x="-26.02" y="0" z="26.02" />
+                </translate>
+                <rotate time="10" x="0" y="1" z="0"/>
+			</transform>
+            <models>
+                <model file="sphere_nt.3d" >
+                    <texture file="mars.jpg" />
+                </model>
+            </models>
+        </group>
+
+		<!--Júpiter faixas laranja e marrons mescladas com outras brancas-->
+		<group>
+			<transform>
+                <translate time="25" align="True">
+                    <point x="0.0" y="0" z="51.0" />
+                    <point x="36.06" y="0" z="36.06" />
+                    <point x="51.0" y="0" z="0.0" />
+                    <point x="36.06" y="0" z="-36.06" />
+                    <point x="0.0" y="0" z="-51.0" />
+                    <point x="-36.06" y="0" z="-36.06" />
+                    <point x="-51.0" y="0" z="-0.0" />
+                    <point x="-36.06" y="0" z="36.06" />
+                </translate>
+                <rotate time="10" x="0" y="1" z="0"/>
+                <scale x="6" y="6" z="6"/>
+			</transform>
+            <models>
+                <model file="sphere_nt.3d" >
+                    <texture file="jupiter.jpg" />
+                </model>
+            </models>
+        </group>
+
+		<!--Saturno marrom e amarelo-->
+		<group>
+			<transform>
+                <translate time="33" align="True">
+                    <point x="0.0" y="0" z="60.4" />
+                    <point x="42.71" y="0" z="42.71" />  
+                    <point x="60.4" y="0" z="0.0" />     
+                    <point x="42.71" y="0" z="-42.71" /> 
+                    <point x="0.0" y="0" z="-60.4" />    
+                    <point x="-42.71" y="0" z="-42.71" />
+                    <point x="-60.4" y="0" z="-0.0" />   
+                    <point x="-42.71" y="0" z="42.71" /> 
+                </translate>
+                <rotate time="10" x="0" y="1" z="0"/>
+                <scale x="5" y="5" z="5"/>
+			</transform>
+            <models>
+                <model file="sphere_nt.3d" >
+                    <texture file="saturn.jpg" />
+                </model>
+            </models>
+        </group>
+		
+		<!--Urano azul esverdeado-->
+		<group>
+			<transform>
+                <translate time="40" align="True">
+                    <point x="0.0" y="0" z="72.0" />
+                    <point x="50.91" y="0" z="50.91" />
+                    <point x="72.0" y="0" z="0.0" />
+                    <point x="50.91" y="0" z="-50.91" />
+                    <point x="0.0" y="0" z="-72.0" />
+                    <point x="-50.91" y="0" z="-50.91" />
+                    <point x="-72.0" y="0" z="-0.0" />
+                    <point x="-50.91" y="0" z="50.91" />
+                </translate>
+                <rotate time="10" x="0" y="1" z="0"/>
+                <scale x="3" y="3" z="3"/>
+			</transform>
+            <models>
+                <model file="sphere_nt.3d" >
+                    <texture file="uranus.jpg" />
+                </model>
+            </models>
+        </group>
+		
+		<!--Neptuno azul quase marinho-->
+		<group>
+			<transform>
+				
+                <translate time="50" align="True">
+                    <point x="0.0" y="0" z="80.1" />
+                    <point x="56.64" y="0" z="56.64" />
+                    <point x="80.1" y="0" z="0.0" />
+                    <point x="56.64" y="0" z="-56.64" />
+                    <point x="0.0" y="0" z="-80.1" />
+                    <point x="-56.64" y="0" z="-56.64" />
+                    <point x="-80.1" y="0" z="-0.0" />
+                    <point x="-56.64" y="0" z="56.64" />
+                </translate><!--
+				<translate x="20" y="20" z="20">-->
+                <rotate time="200" x="0" y="1" z="0"/>
+                <scale x="2.8" y="2.8" z="2.8"/>
+			</transform>
+            <models>
+                <model file="sphere_nt.3d" >
+                    <texture file="neptune.jpg" />
+                </model>
+            </models>
+        </group>
+	</group>	
+</world>
